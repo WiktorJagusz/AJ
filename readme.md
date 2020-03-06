@@ -1,0 +1,1 @@
+Strona reklamujaca usługi z dziedziny beauty
