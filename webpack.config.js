@@ -1,6 +1,6 @@
 const path = require("path");
 const entryPath = "";
-const entryFile = "main.js";
+const entryFile = "App.js";
 
 module.exports = {
   entry: `./${entryPath}/js/${entryFile}`,
@@ -21,6 +21,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        loader: 'url-loader?limit=100000' 
+      },
+      {
+        test: /\.mp4$/,
+        use: 'file-loader?name=data/video/[name].[ext]',
       },
       {
         test: /\.css$/,

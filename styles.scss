@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cookie', cursive;
+}
+
+body {
+    background-color: pink;
+}
+
+#carouselExampleControls {
+    border: 3px solid green;
+}
+
+.myContainer {
+    
+    height: 100vh;
+    .navbar-brand {
+        img {
+            height: 5vh;
+        }
+    }
+    .carousel-item{
+            height: 55vh;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                height: auto;
+            }
+    }
+    .jumbotron {
+        height: 55vh;
+    }
+    footer {
+        height: 5vh;
+    }
+}
+
+
+
+
