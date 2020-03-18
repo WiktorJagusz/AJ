@@ -1,9 +1,50 @@
 {
-    "cars": [
-      {
-        "id": 1 ,
-        "name": "Gallardo" ,
-        "brand": "Lamborghini"
-      }
-    ]
-  }
+  "messages": [
+    {
+      "id": 1,
+      "mail": "Gallardo",
+      "text": "Lamborghini"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "mail": "w@e",
+      "text": "qwd",
+      "id": 4
+    },
+    {
+      "mail": "",
+      "text": "",
+      "id": 5
+    },
+    {
+      "mail": "w@e",
+      "text": "",
+      "id": 6
+    },
+    {
+      "mail": "w@e",
+      "text": "qwer",
+      "id": 7
+    },
+    {
+      "mail": "w@e",
+      "text": "qwewqeqweqweqweqweq",
+      "id": 8
+    },
+    {
+      "mail": "w@e",
+      "text": "",
+      "id": 9
+    },
+    {
+      "mail": "w@e",
+      "text": "mkmkmkmkmkmkmkmmkm",
+      "id": 10
+    }
+  ]
+}

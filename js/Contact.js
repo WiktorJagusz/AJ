@@ -16,7 +16,28 @@ export default class Contact extends Component {
             alert("Email powinien zawierac conajmniej 3 znaki i @.")
         } else if (this.state.textarea.length < 1 ) {
             alert('Brak wiadomości')
+        } else {
+            alert('Dziekujemy za wysłanie wiadomości');
+            this.setState({email: "", textarea: ""})
         }
+
+        
+
+        const message = {
+            mail: `${this.state.email}`,
+            text: `${this.state.textarea}`
+        }
+
+        fetch('http://localhost:3000/messages/', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+              },
+            body: JSON.stringify(message)
+            })
+            .then(res=>res.json())
+            .then(res => console.log(res));
+
     }
 
     render() {
