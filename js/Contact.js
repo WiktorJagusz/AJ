@@ -32,6 +32,7 @@ export default class Contact extends Component {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json',
+                'cors': 'no-cors'
               },
             body: JSON.stringify(message)
             })
@@ -39,7 +40,9 @@ export default class Contact extends Component {
             .then(res => console.log(res));
 
     }
+    // componentDidMount(){
 
+    // }
     render() {
         return(
             <>

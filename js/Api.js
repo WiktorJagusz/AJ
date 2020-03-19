@@ -10,7 +10,13 @@ export default class Api extends Component {
     }
     componentDidMount() {
 
-        fetch(`https://jsonplaceholder.typicode.com/todos/${Math.floor(Math.random() * 100) + 1}`)
+        fetch(`https://jsonplaceholder.typicode.com/todos/${Math.floor(Math.random() * 100) + 1}`,{
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json',
+                'cors': 'no-cors'
+              },
+        })
         .then(response => response.json())
         .then(response => this.setState({facts: response}))
     }

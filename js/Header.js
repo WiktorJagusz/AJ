@@ -11,7 +11,9 @@ export default class Header extends Component{
             <nav className="navbar navbar-light bg-light">
                 <a className="navbar-brand" href="#">
                 <img src="../data/pics/eye-icon.png" className="d-inline-block align-top" alt="eye-icon"/>
-                Bootstrap
+                <h1>
+                    <span className="fast-flicker">Love</span>mIps<span className="flicker">u</span>m
+                </h1>
                 </a>    
             </nav>
            
