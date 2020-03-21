@@ -5,12 +5,12 @@ export default class Api extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            facts: false
+            text: false
         };
     }
     componentDidMount() {
 
-        fetch(`https://jsonplaceholder.typicode.com/todos/${Math.floor(Math.random() * 100) + 1}`,{
+        this.fetchComponent = fetch(`https://catfact.ninja/fact`,{
             method: 'get',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,15 +18,13 @@ export default class Api extends Component {
               },
         })
         .then(response => response.json())
-        .then(response => this.setState({facts: response}))
+        .then(response => this.setState({text: response.fact}))
+    }
+    componentWillUnmount(){
+        this.fetchComponent = false
     }
     render() {
-        
-        console.log(this.state.facts)
-        const {facts} = this.state;
-    return facts ? <h1>{facts.title}</h1> : <h2>Ładuje</h2>;
+    const {text} = this.state;
+    return text ? <h1 className="goldText">{text}</h1> : <h1>Lołding...</h1>;
     }
 }
-
-
-// 

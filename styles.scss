@@ -3,6 +3,55 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cookie', cursive;
+    @media (max-width: 430px) {
+        font-size: 1rem;
+    }
+    @media (min-width: 431px) {
+        font-size: 1.4rem;
+    }
+    @media (min-width: 901px) {
+        font-size: 1.9rem;
+    }
+    @media (min-width: 401px) {
+        div.closeX {
+            display: none;
+            span {
+                display: none;
+            }
+        }
+        .nav {
+            display: flex;
+        }
+
+    }
+    .menu-closed {
+        display: none;
+    }
+    @media (min-width: 401px) {
+        .menu-closed{
+            display: flex;
+        }
+    }
+    @media (max-width: 400px) {
+        
+        header {
+          display: none;
+        
+        }
+        footer {
+            display: none;
+          }
+        main {
+            display: none;
+        }
+        ul{
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+      }
 }
 
 body {
@@ -12,6 +61,36 @@ body {
 
 
 .myContainer {
+    .goldText {
+        animation: goldenAura 5s forwards;
+    }
+    @keyframes goldenAura {
+        0% {
+            color: black;
+        }
+        100%{
+            color: goldenrod;
+            text-shadow: 5px 5px 4px gold;
+        }
+    }
+    .closeX {
+        width: 15vw;
+        // height: 8vh;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        span {
+            color: red;
+            font-size: 2em;
+        }
+        
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     
     height: 100vh;
     .navbar-brand {
@@ -19,7 +98,7 @@ body {
         justify-content: space-between;
         width: 100%;
         align-items: center;
-        h1 {
+        div {
             text-align: center;
             color: pink;
             .flicker {

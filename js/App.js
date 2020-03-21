@@ -17,17 +17,18 @@ class App extends Component{
         super(props);
         this.state = {
             menuContent: "jumbotron",
+            showBlock: "none",
         };
     }
-    handleChangeMainContent = (event) => {
-        this.setState({menuContent: event})
+    handleChangeMainContent = (page) => {
+        this.setState({menuContent: page, showBlock: page})
     }
     render(){
        return(
            <div className="container-fluid myContainer">
                 <Header />
-                <Navigation changeState = {this.handleChangeMainContent}/>
-                <Main menuContent={this.state.menuContent}/>
+                <Navigation changeState = {this.handleChangeMainContent} showBlock={this.state.showBlock}/>
+                <Main menuContent={this.state.menuContent} showBlock={this.state.showBlock}/>
                 <Footer/>
            </div>
        ) 

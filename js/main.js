@@ -10,11 +10,11 @@ import Api from './Api';
 
 export default class Main extends Component{
     render(){
-        console.log(Gallery)
         if (this.props.menuContent === "jumbotron") {
+
             return(
             <>
-              <main>
+              <main style={{display: 'block'}}>
                     <Jumbotron />
               </main>
             </>
@@ -23,7 +23,7 @@ export default class Main extends Component{
         } else if (this.props.menuContent === "gallery") {
             return(
                 <>
-                  <main>
+                  <main style={{display: 'block'}}>
                         <Gallery />
                   </main>
                 </>
@@ -31,7 +31,7 @@ export default class Main extends Component{
         } else if (this.props.menuContent === "about") {
             return(
                 <>
-                  <main>
+                  <main style={{display: 'block'}}>
                         <About />
                   </main>
                 </>
@@ -39,7 +39,7 @@ export default class Main extends Component{
         } else if (this.props.menuContent === "contact") {
             return(
                 <>
-                  <main>
+                  <main style={{display: 'block'}}>
                         <Contact />
                   </main>
                 </>
@@ -47,11 +47,13 @@ export default class Main extends Component{
         } else if (this.props.menuContent === "api") {
             return(
                 <>
-                  <main>
+                  <main style={{display: 'block'}}>
                         <Api />
                   </main>
                 </>
             )
+        } else {
+            return null
         }
     }
 }
